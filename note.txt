@@ -1,0 +1,60 @@
+
+
+
+
+
+complete information about crud application:-************************************************************
+*****************************************************************************
+main files of js 
+1. config.js
+2. function.js
+3. sessiom.js
+4. state.js
+5. crud.js  => custom js file : complete page related code.
+               jitany bhi html code bana hai
+			   ex:- register.html,login.html,dashboard.html, in sabaka code isi file se chal raha ....
+			   
+			   
+			   
+config.js:-    sari ki sari project setting isi file me likhi jayengi.
+               examole ke tair par jaise
+			   agar apako server ka url or local ka url jaise
+			   settings change karani hai tohi clega isi tarah ki setting save kr skate hai....
+
+			   
+function.js:- sare ke sare user define function ji9nko app banoge ak bar or use kroge bar bar. function.js yahi kaam.
+              kal key din agar apako aor bhi function banane hai, to ham isi ile me save krenge...
+			 
+			 
+			 
+ sessiom.js :- is file ka nimn likhiit yahin kam hai.		
+               1. session  ka data banati hai.
+               2. ye check karana ki session exist kar raha ya nhi exist kr raha hai.
+               3. user ko login se dashboard par bejna, agar user login ho chuka hai.
+               4. agar user logout kr rha hai to, session ko delete karana bhi isi ka kam hai.
+               5. ak bar user ne logout kr diya to waps se dashboard bina login karaye access nhi kr sakate.
+               6. is file ka sara code IIFE function ke behalf pay likha gaya hai.
+
+			   
+state.js:- 
+          eg : state ky hota hai?
+               login sey pahle----->dashboard.html	
+                login key bad------>dashboard.html	
+                laut ke buduu ghar ko aye --> waps aney --> dashboard.html
+                logout karney ke liye --> dashboard.html
+				logout kardiya --> dashboard.html
+ 				
+         isi state ko maintain karaney key liya:-   
+		                     use hash parameter : wibndow.location.hash
+							 login sey pahle ---> dashboard.html
+							 login sey bad ---> dashboard.html#login-success
+							 again open dashboard --->  dashboard.html#welcone-back
+							 logout karney sey -->  dashboard.html#log-out
+							 
+							 bina login open kartey ho dashboard --->
+							  dashboard.html#dashboard-expired
+							  
+							  to. satte js ka kam kya hai?
+							     iske nimn karya hai-----
+								 1. state => hash key according => success or error alert dikhana 
+								 2. dashboard ka user ka data dikhana => name, and email knha sey sessiondata.
